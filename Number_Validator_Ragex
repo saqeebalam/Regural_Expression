@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Number_Validator_Ragex {
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Mobile number=");
+		String number=sc.next();
+		String ragex="[6-9][0-9]{9}";
+		if(number.matches(ragex)) {
+			System.out.println("Valid Mobile Number");
+		}else {
+			System.out.println("Invalid Mobile Number");
+		}
+		sc.close();
+	}
+
+}
