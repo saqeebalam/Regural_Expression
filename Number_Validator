@@ -1,0 +1,28 @@
+//wap to validate mobile number number length if not 10digit it give error and number is starting from 6,7,8,9
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Validate_Mobile_Number {
+	public static void main(String[] args) {
+		int count=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Contact Number=");
+		String number=sc.next();
+		Pattern p = Pattern.compile("[^0-9]");
+		Matcher m = p.matcher(number);
+		while(m.find()) {
+			count++;
+		}
+		if(count!=0 || number.length()<10 || number.length()>10 || number.charAt(0)== '1' || number.charAt(0)== '2' || number.charAt(0)== '3' || number.charAt(0)== '4'  || number.charAt(0)== '5' ) {
+			System.out.println("Error");
+		}
+		else {
+			System.out.println("Input Accepted");
+		}
+		
+		sc.close();
+	}
+
+}
